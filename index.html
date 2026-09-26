@@ -7,7 +7,7 @@
 <meta name="theme-color" content="#FFF7F2"/>
 <meta property="og:title" content="Như Quân & Như Quỳnh – Wedding Invitation"/>
 <meta property="og:description" content="Wedding Invitation – 16:30 · 17.10.2026 · 08.09 ÂL"/>
-<meta property="og:image" content="hero.webp"/>
+<meta property="og:image" content="https://weddinginvitationhappy.github.io/Quan-Quynh/hero.webp"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <link rel="preload" as="image" href="1.webp" fetchpriority="high"/>
@@ -1354,7 +1354,7 @@ body{letter-spacing:.003em}
 /* Particles: fewer, softer, more premium */
 .flash{box-shadow:0 0 16px rgba(255,255,255,.72);animation-duration:1.3s}
 .petal{filter:drop-shadow(0 6px 14px rgba(172,92,115,.12));opacity:.72}
-.falling-heart{color:rgba(186,103,128,.28);text-shadow:0 5px 20px rgba(184,95,117,.10)}
+.falling-heart{color:rgba(186,103,128,.34);text-shadow:0 5px 20px rgba(184,95,117,.12),0 0 12px rgba(255,255,255,.42);filter:drop-shadow(0 7px 16px rgba(184,95,117,.08));transform-origin:center center}
 #bar{background:linear-gradient(to top,rgba(255,249,250,.98),rgba(255,249,250,.80),transparent)}
 #bar input{border-color:rgba(201,165,111,.18);box-shadow:0 8px 30px rgba(98,58,70,.06)}
 
@@ -1611,20 +1611,20 @@ body{letter-spacing:.003em}
     <span class="room-no" data-reveal>Room 08 · Gift Counter</span>
     <span class="room-title" data-reveal data-delay="1">Wedding Gift</span>
     <span class="room-script" data-reveal data-delay="2">Phong bì yêu thương</span>
-    <p class="room-sub" data-reveal data-delay="3">Mục quà mừng đang tạm khóa cho đến khi cập nhật đúng mã QR của cô dâu và chú rể.</p>
+    <p class="room-sub" data-reveal data-delay="3">Quét mã QR để gửi một chút yêu thương đến cô dâu &amp; chú rể ♡</p>
     <div class="gift-grid" data-reveal data-delay="4">
       <article class="gift-person" id="giftBride">
         <div class="gift-icon">♡</div>
         <small>Cô dâu</small>
         <h3>Như Quỳnh</h3>
-        <button class="gift-toggle" type="button" disabled title="Hãy thay qrcd.webp bằng QR của Như Quỳnh rồi bỏ thuộc tính disabled">QR cô dâu chưa cập nhật</button>
+        <button class="gift-toggle" type="button" data-qr="qrcd.webp" data-person="Cô dâu Như Quỳnh" data-note="Quét mã QR để gửi quà mừng tới cô dâu Như Quỳnh">Mở QR cô dâu</button>
         <p class="gift-hint">Chạm để mở mã QR kích thước lớn.</p>
       </article>
       <article class="gift-person" id="giftGroom">
         <div class="gift-icon">♡</div>
         <small>Chú rể</small>
         <h3>Như Quân</h3>
-        <button class="gift-toggle" type="button" disabled title="Hãy thay qrcr.webp bằng QR của Như Quân rồi bỏ thuộc tính disabled">QR chú rể chưa cập nhật</button>
+        <button class="gift-toggle" type="button" data-qr="qrcr.webp" data-person="Chú rể Như Quân" data-note="Quét mã QR để gửi quà mừng tới chú rể Như Quân">Mở QR chú rể</button>
         <p class="gift-hint">Chạm để mở mã QR kích thước lớn.</p>
       </article>
     </div>
@@ -2218,24 +2218,24 @@ let fallingHeartTimer;
 function makeFallingHeart(){
   if(document.hidden)return;
   const layer=document.getElementById('romanticHeartLayer');
-  if(!layer||layer.children.length>=18)return;
+  if(!layer||layer.children.length>=52)return;
   const h=document.createElement('span');
   h.className='falling-heart';
-  h.textContent=['♡','♡','♡','♥','ღ','❥'][Math.floor(Math.random()*6)];
+  h.textContent=['♡','♡','♡','♡','♡','♥','ღ','❥'][Math.floor(Math.random()*8)];
   h.style.left=(Math.random()*100)+'%';
-  h.style.fontSize=(12+Math.random()*22)+'px';
-  h.style.setProperty('--heart-opacity',(0.08+Math.random()*.20).toFixed(2));
-  h.style.setProperty('--heart-duration',(8+Math.random()*7)+'s');
-  h.style.setProperty('--heart-drift',((Math.random()-.5)*140)+'px');
+  h.style.fontSize=(11+Math.random()*28)+'px';
+  h.style.setProperty('--heart-opacity',(0.10+Math.random()*.30).toFixed(2));
+  h.style.setProperty('--heart-duration',(7+Math.random()*7)+'s');
+  h.style.setProperty('--heart-drift',((Math.random()-.5)*190)+'px');
   h.style.setProperty('--heart-rotate',((Math.random()-.5)*520)+'deg');
-  h.style.setProperty('--heart-scale',(0.72+Math.random()*.7).toFixed(2));
+  h.style.setProperty('--heart-scale',(0.62+Math.random()*1.05).toFixed(2));
   layer.appendChild(h);
-  setTimeout(()=>h.remove(),15500);
+  setTimeout(()=>h.remove(),16000);
 }
 function startFallingHearts(){
   if(fallingHeartTimer)return;
-  for(let i=0;i<4;i++)setTimeout(makeFallingHeart,i*260);
-  fallingHeartTimer=setInterval(makeFallingHeart,1350);
+  for(let i=0;i<16;i++)setTimeout(makeFallingHeart,i*90);
+  fallingHeartTimer=setInterval(makeFallingHeart,420);
 }
 </script>
 </body>
