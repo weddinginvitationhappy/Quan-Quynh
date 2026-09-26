@@ -6,7 +6,7 @@
 <title>Như Quân & Như Quỳnh – Wedding Invitation</title>
 <meta name="theme-color" content="#FFF7F2"/>
 <meta property="og:title" content="Như Quân & Như Quỳnh – Wedding Invitation"/>
-<meta property="og:description" content="Wedding Invitation – 16:30 · 17.10.2026 · 08.09 ÂL"/>
+<meta property="og:description" content="Trân trọng kính mời bạn tới chung vui cùng Như Quân & Như Quỳnh"/>
 <meta property="og:image" content="https://weddinginvitationhappy.github.io/Quan-Quynh/hero.webp"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
@@ -541,7 +541,7 @@ a{color:inherit}
 .cal-grid .empty{opacity:0}
 .cal-grid .mark{background:linear-gradient(135deg,var(--rose2),var(--rose));color:#fff;box-shadow:0 10px 24px rgba(217,135,151,.22);position:relative}
 .cal-grid .mark:after{
-  content:'EXHIBIT';
+  content:attr(data-mark-label);
   position:absolute;
   top:-17px;left:50%;
   transform:translateX(-50%);
@@ -910,7 +910,7 @@ body{
   text-align:center;
 }
 #hero .hero-card::before{
-  content:'17  ·  10  ·  2026';
+  content:attr(data-event-date);
   position:static;
   display:inline-flex;
   align-items:center;
@@ -1333,7 +1333,7 @@ body{letter-spacing:.003em}
 .guest-name{color:#bd6b82}
 .month-head strong,.cd-box b{color:#bd6b82}
 .cal-grid .mark{background:linear-gradient(145deg,#e8afbd,#bf6d84);box-shadow:0 12px 30px rgba(177,91,117,.26)}
-.cal-grid .mark:after{content:'17 OCT';color:#b55f78;box-shadow:0 7px 18px rgba(86,47,58,.10)}
+.cal-grid .mark:after{content:attr(data-mark-label);color:#b55f78;box-shadow:0 7px 18px rgba(86,47,58,.10)}
 .cer-photo{box-shadow:0 20px 54px rgba(82,48,58,.11)}
 .cer-info{margin-top:-38px}
 .cer-row{border-color:rgba(201,165,111,.12);background:rgba(255,249,250,.88)!important}
@@ -1380,7 +1380,7 @@ body{letter-spacing:.003em}
     <div class="md-kicker">Private Exhibition</div>
     <div class="md-seal">Q&amp;Q</div>
     <div class="md-names">Quân & Quỳnh</div>
-    <div class="md-date">16:30 · 17 · 10 · 2026 · 08/09 ÂL</div>
+    <div class="md-date" id="doorEventDate">16:30 · 17 · 10 · 2026 · 08/09 ÂL</div>
     <div class="md-note">Chạm để mở thiệp và bước vào ngày vui của chúng mình ♡</div>
   </div>
 </div>
@@ -1398,7 +1398,7 @@ body{letter-spacing:.003em}
       <div class="hero-mark">Q&amp;Q</div>
       <div class="hero-room">The Wedding · 2026</div>
     </div>
-    <div class="hero-card">
+    <div class="hero-card" id="heroCard" data-event-date="17  ·  10  ·  2026">
       <div class="hero-kicker" data-reveal>THE WEDDING OF</div>
       <h1 class="hero-title" data-reveal data-delay="1">Như Quân <span>&</span> Như Quỳnh</h1>
       <p class="hero-desc" data-reveal data-delay="2">
@@ -1434,7 +1434,7 @@ body{letter-spacing:.003em}
 
       <div class="ticket" data-reveal data-delay="2">
         <div class="ticket-top">
-          <div>INV-171026 · PRIVATE TICKET</div>
+          <div id="ticketCode">INV-171026 · PRIVATE TICKET</div>
           <div class="ticket-stamp">ADMIT ONE</div>
         </div>
         <div class="ticket-main">
@@ -1446,8 +1446,8 @@ body{letter-spacing:.003em}
           </p>
         </div>
         <div class="ticket-foot">
-          <div><b>17.10.2026 · 08/09 ÂL</b><span>Wedding Date</span></div>
-          <div><b>16:30 · Thứ Bảy</b><span>Wedding Time</span></div>
+          <div><b id="ticketDate">17.10.2026 · 08/09 ÂL</b><span>Wedding Date</span></div>
+          <div><b id="ticketTime">16:30 · Thứ Bảy</b><span>Wedding Time</span></div>
         </div>
       </div>
     </div>
@@ -1457,14 +1457,14 @@ body{letter-spacing:.003em}
     <span class="room-no" data-reveal>Room 01 · Save The Date</span>
     <span class="room-title" data-reveal data-delay="1">The Date</span>
     <span class="room-script" data-reveal data-delay="2">Ngày mình thành đôi</span>
-    <p class="room-sub" data-reveal data-delay="3">Thứ Bảy, ngày 17 tháng 10 năm 2026 · 16:30 (08/09 ÂL) — thời khắc chúng mình mong được đón bạn đến chung vui.</p>
+    <p class="room-sub" id="dateRoomText" data-reveal data-delay="3">Thứ Bảy, ngày 17 tháng 10 năm 2026 · 16:30 (08/09 ÂL) — thời khắc chúng mình mong được đón bạn đến chung vui.</p>
     <div class="calendar-card" data-reveal="zoom" data-delay="4">
       <div class="month-head"><strong>10</strong><span>October 2026</span></div>
       <div class="cal-grid">
         <div class="dow">T2</div><div class="dow">T3</div><div class="dow">T4</div><div class="dow">T5</div><div class="dow">T6</div><div class="dow">T7</div><div class="dow">CN</div>
         <div class="empty"></div><div class="empty"></div><div class="empty"></div><div>1</div><div>2</div><div>3</div><div>4</div>
         <div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div>
-        <div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div class="mark">17</div><div>18</div>
+        <div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div class="mark" id="calendarDay17" data-mark-label="17 OCT">17</div><div id="calendarDay18" data-mark-label="18 OCT">18</div>
         <div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div>
         <div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div><div class="empty"></div>
       </div>
@@ -1503,7 +1503,7 @@ body{letter-spacing:.003em}
         <div class="cer-info">
           <div class="cer-label">Groom's Ceremony Room</div>
           <h2 class="cer-title">Tiệc cưới Nhà Trai</h2>
-          <div class="cer-row"><div class="cer-ico">🗓</div><div><b>Thứ Bảy, 17/10/2026</b><span>Đón khách lúc 16:30 · 08/09 ÂL</span></div></div>
+          <div class="cer-row"><div class="cer-ico">🗓</div><div><b id="groomEventDate">Thứ Bảy, 17/10/2026</b><span id="groomEventTime">Đón khách lúc 16:30 · 08/09 ÂL</span></div></div>
           <div class="cer-row"><div class="cer-ico">📍</div><div><b>Nhà Trai · Như Quân</b><span>Xóm 3 - TDP Mỏ Thổ - Phường Việt Yên - Thành phố Bắc Ninh</span></div></div>
           <div class="cer-row"><div class="cer-ico">↪</div><div><b>Địa chỉ cũ</b><span>Xóm 3, Mỏ Thổ, Minh Đức, Việt Yên, Bắc Giang</span></div></div>
           <div class="cer-actions"><a href="https://goo.gl/maps/8WfdFmLrk2uokusc7?g_st=az" target="_blank" rel="noopener">Chỉ đường</a><a href="#" id="calGroom">Thêm lịch</a></div>
@@ -1515,7 +1515,7 @@ body{letter-spacing:.003em}
         <div class="cer-info">
           <div class="cer-label">Bride's Ceremony Room</div>
           <h2 class="cer-title">Tiệc cưới Nhà Gái</h2>
-          <div class="cer-row"><div class="cer-ico">🗓</div><div><b>Thứ Bảy, 17/10/2026</b><span>Đón khách lúc 16:30 · 08/09 ÂL</span></div></div>
+          <div class="cer-row"><div class="cer-ico">🗓</div><div><b id="brideEventDate">Thứ Bảy, 17/10/2026</b><span id="brideEventTime">Đón khách lúc 16:30 · 08/09 ÂL</span></div></div>
           <div class="cer-row"><div class="cer-ico">📍</div><div><b>Nhà Gái · Như Quỳnh</b><span>Thôn 6 - Xã Trại Cau - Tỉnh Thái Nguyên</span></div></div>
           <div class="cer-row"><div class="cer-ico">↪</div><div><b>Địa chỉ cũ</b><span>Nhà văn hóa xóm Làng Chàng - xã Trại Cau - Đồng Hỷ - Thái Nguyên</span></div></div>
           <div class="cer-actions"><a href="https://goo.gl/maps/Vy3WbBu7rPtpt7x76?g_st=az" target="_blank" rel="noopener">Chỉ đường</a><a href="#" id="calBride">Thêm lịch</a></div>
@@ -1534,7 +1534,7 @@ body{letter-spacing:.003em}
       <div class="j-item" data-reveal><div class="j-dot">01</div><div class="j-card"><div class="j-year">First Exhibit</div><h3 class="j-title">Một lần gặp gỡ</h3><p class="j-desc">Có những cuộc gặp rất nhẹ, nhưng lại ở lại thật lâu trong ký ức.</p><img class="j-img" src="5.webp" alt="" loading="lazy" decoding="async"/></div></div>
       <div class="j-item" data-reveal><div class="j-dot">02</div><div class="j-card"><div class="j-year">Second Exhibit</div><h3 class="j-title">Những ngày dịu dàng</h3><p class="j-desc">Tình yêu lớn lên từ những điều nhỏ: một tin nhắn, một buổi hẹn, một ánh nhìn.</p><img class="j-img" src="6.webp" alt="" loading="lazy" decoding="async"/></div></div>
       <div class="j-item" data-reveal><div class="j-dot">03</div><div class="j-card"><div class="j-year">Third Exhibit</div><h3 class="j-title">Lời hẹn của cả đời</h3><p class="j-desc">Khi câu trả lời là “Có”, mọi ngày phía trước bỗng trở thành một hành trình chung.</p><img class="j-img" src="7.webp" alt="" loading="lazy" decoding="async"/></div></div>
-      <div class="j-item" data-reveal><div class="j-dot">♡</div><div class="j-card"><div class="j-year">17.10.2026 · 16:30 · 08/09 ÂL</div><h3 class="j-title">Ngày tình yêu nở hoa</h3><p class="j-desc">Và chúng mình mong được gặp bạn trong căn phòng đẹp nhất của ngày ấy.</p></div></div>
+      <div class="j-item" data-reveal><div class="j-dot">♡</div><div class="j-card"><div class="j-year" id="journeyEventDate">17.10.2026 · 16:30 · 08/09 ÂL</div><h3 class="j-title">Ngày tình yêu nở hoa</h3><p class="j-desc">Và chúng mình mong được gặp bạn trong căn phòng đẹp nhất của ngày ấy.</p></div></div>
     </div>
   </section>
 
@@ -1634,7 +1634,7 @@ body{letter-spacing:.003em}
     <img class="close-bg" src="hero.webp" alt="Thank you" loading="lazy" decoding="async"/>
     <div class="close-filter"></div>
     <div class="close-content">
-      <div class="close-room" data-reveal>Hẹn gặp bạn · 16:30 · 17.10.2026 · 08/09 ÂL</div>
+      <div class="close-room" id="closingEventDate" data-reveal>Hẹn gặp bạn · 16:30 · 17.10.2026 · 08/09 ÂL</div>
       <div class="close-thanks" data-reveal data-delay="1">Thank You</div>
       <div class="close-names" data-reveal data-delay="2">Như Quân & Như Quỳnh</div>
       <div class="close-actions" data-reveal data-delay="3">
@@ -1648,7 +1648,7 @@ body{letter-spacing:.003em}
 
 <div id="live"></div>
 <div id="bar">
-  <div class="quick-guest" id="quickGuest" title="Tên lấy từ ?guest=">Quý Khách</div>
+  <div class="quick-guest" id="quickGuest" title="Tên lấy từ ?event=17&guest=...">Quý Khách</div>
   <input id="quickWish" placeholder="Gửi lời chúc nhanh..."/>
   <button id="sendQuick">Gửi</button>
   <button id="heartBtn">♡</button>
@@ -1671,7 +1671,46 @@ body{letter-spacing:.003em}
 // Dán URL Web App sau khi Deploy Google Apps Script vào đây.
 // Ví dụ: AKfycbyT_kxHxRLP5G0dTSOEBJtOE1MK_7tga2D98UJ6OfH5KIY6jF4HfYlk92_iDYriVbTvGg
 const GOOGLE_SCRIPT_URL='https://script.google.com/macros/s/AKfycbyT_kxHxRLP5G0dTSOEBJtOE1MK_7tga2D98UJ6OfH5KIY6jF4HfYlk92_iDYriVbTvGg/exec'; // Dán URL Web App /exec sau khi deploy Code.gs đi kèm.
-const WEDDING_DATE=new Date('2026-10-17T16:30:00+07:00');
+
+// Hai suất mời dùng chung một source.
+// Link khuyến nghị:
+//   Ngày 17: ?event=17&guest=Bạn-Nguyễn-Nam
+//   Ngày 18: ?event=18&guest=Anh-Nguyễn-Văn-A
+// Nếu thiếu hoặc nhập sai event, thiệp mặc định dùng event=17.
+const EVENT_CONFIG={
+  '17':{
+    key:'17',
+    start:'2026-10-17T16:30:00+07:00',
+    end:'2026-10-17T18:30:00+07:00',
+    time:'16:30',
+    day:'17',
+    dateSlash:'17/10/2026',
+    dateDot:'17.10.2026',
+    lunar:'08/09 ÂL',
+    weekday:'Thứ Bảy',
+    heroDate:'17  ·  10  ·  2026',
+    ticketCode:'INV-171026'
+  },
+  '18':{
+    key:'18',
+    start:'2026-10-18T10:30:00+07:00',
+    end:'2026-10-18T12:30:00+07:00',
+    time:'10:30',
+    day:'18',
+    dateSlash:'18/10/2026',
+    dateDot:'18.10.2026',
+    lunar:'09/09 ÂL',
+    weekday:'Chủ Nhật',
+    heroDate:'18  ·  10  ·  2026',
+    ticketCode:'INV-181026'
+  }
+};
+
+const params=new URLSearchParams(location.search);
+const eventRaw=(params.get('event')||'17').trim();
+const eventKey=EVENT_CONFIG[eventRaw]?eventRaw:'17';
+const EVENT=EVENT_CONFIG[eventKey];
+const WEDDING_DATE=new Date(EVENT.start);
 const audio=document.getElementById('audio');
 let playing=false;
 
@@ -1683,8 +1722,13 @@ const songs=[
 let songIndex=0;
 
 /* Guest name */
-const params=new URLSearchParams(location.search);
-const guestParam=(params.get('guest')||'').trim();
+const guestParamRaw=(params.get('guest')||'').trim();
+// Cho phép dùng URL gọn như ?guest=Bạn-Nguyễn-Nam hoặc ?guest=Bạn_Nguyễn_Nam
+// nhưng khi hiển thị/lưu RSVP sẽ tự chuyển thành "Bạn Nguyễn Nam".
+const guestParam=guestParamRaw
+  .replace(/[-_]+/g,' ')
+  .replace(/\s+/g,' ')
+  .trim();
 const guest=guestParam||'Quý Khách';
 document.getElementById('guestName').textContent=guest;
 const rname=document.getElementById('rname');
@@ -1695,6 +1739,33 @@ if(guestParam){
 }
 document.getElementById('quickGuest').textContent=guest;
 document.getElementById('quickWish').placeholder=guestParam?`Gửi lời chúc nhanh với tên ${guest}...`:'Gửi lời chúc nhanh...';
+
+/* Event schedule: event=17 đứng trước &guest=... trong link */
+function applyEventDetails(){
+  const setText=(id,text)=>{const el=document.getElementById(id);if(el)el.textContent=text};
+
+  setText('doorEventDate',`${EVENT.time} · ${EVENT.day} · 10 · 2026 · ${EVENT.lunar}`);
+  const heroCard=document.getElementById('heroCard');
+  if(heroCard)heroCard.setAttribute('data-event-date',EVENT.heroDate);
+
+  setText('ticketCode',`${EVENT.ticketCode} · PRIVATE TICKET`);
+  setText('ticketDate',`${EVENT.dateDot} · ${EVENT.lunar}`);
+  setText('ticketTime',`${EVENT.time} · ${EVENT.weekday}`);
+  setText('dateRoomText',`${EVENT.weekday}, ngày ${EVENT.day} tháng 10 năm 2026 · ${EVENT.time} (${EVENT.lunar}) — thời khắc chúng mình mong được đón bạn đến chung vui.`);
+
+  const day17=document.getElementById('calendarDay17');
+  const day18=document.getElementById('calendarDay18');
+  if(day17)day17.classList.toggle('mark',eventKey==='17');
+  if(day18)day18.classList.toggle('mark',eventKey==='18');
+
+  setText('groomEventDate',`${EVENT.weekday}, ${EVENT.dateSlash}`);
+  setText('groomEventTime',`Đón khách lúc ${EVENT.time} · ${EVENT.lunar}`);
+  setText('brideEventDate',`${EVENT.weekday}, ${EVENT.dateSlash}`);
+  setText('brideEventTime',`Đón khách lúc ${EVENT.time} · ${EVENT.lunar}`);
+  setText('journeyEventDate',`${EVENT.dateDot} · ${EVENT.time} · ${EVENT.lunar}`);
+  setText('closingEventDate',`Hẹn gặp bạn · ${EVENT.time} · ${EVENT.dateDot} · ${EVENT.lunar}`);
+}
+applyEventDetails();
 
 /* Opening */
 function flashBurst(){
@@ -1767,8 +1838,8 @@ function calendarUrl(title,start,end,details,locationText){
   const fmt=d=>d.toISOString().replace(/[-:]/g,'').split('.')[0]+'Z';
   return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(title)+'&dates='+fmt(start)+'/'+fmt(end)+'&details='+encodeURIComponent(details)+'&location='+encodeURIComponent(locationText);
 }
-document.getElementById('calGroom').href=calendarUrl('Tiệc cưới Nhà Trai - Như Quân & Như Quỳnh',new Date('2026-10-17T16:30:00+07:00'),new Date('2026-10-17T18:30:00+07:00'),'Tiệc cưới Nhà Trai · Đón khách lúc 16:30 · 08/09 ÂL · Địa chỉ cũ: Xóm 3, Mỏ Thổ, Minh Đức, Việt Yên, Bắc Giang','Xóm 3 - TDP Mỏ Thổ - Phường Việt Yên - Thành phố Bắc Ninh');
-document.getElementById('calBride').href=calendarUrl('Tiệc cưới Nhà Gái - Như Quân & Như Quỳnh',new Date('2026-10-17T16:30:00+07:00'),new Date('2026-10-17T18:30:00+07:00'),'Tiệc cưới Nhà Gái · Đón khách lúc 16:30 · 08/09 ÂL · Địa chỉ cũ: Nhà văn hóa xóm Làng Chàng - xã Trại Cau - Đồng Hỷ - Thái Nguyên','Thôn 6 - Xã Trại Cau - Tỉnh Thái Nguyên');
+document.getElementById('calGroom').href=calendarUrl('Tiệc cưới Nhà Trai - Như Quân & Như Quỳnh',new Date(EVENT.start),new Date(EVENT.end),`Tiệc cưới Nhà Trai · Đón khách lúc ${EVENT.time} · ${EVENT.lunar} · Địa chỉ cũ: Xóm 3, Mỏ Thổ, Minh Đức, Việt Yên, Bắc Giang`,'Xóm 3 - TDP Mỏ Thổ - Phường Việt Yên - Thành phố Bắc Ninh');
+document.getElementById('calBride').href=calendarUrl('Tiệc cưới Nhà Gái - Như Quân & Như Quỳnh',new Date(EVENT.start),new Date(EVENT.end),`Tiệc cưới Nhà Gái · Đón khách lúc ${EVENT.time} · ${EVENT.lunar} · Địa chỉ cũ: Nhà văn hóa xóm Làng Chàng - xã Trại Cau - Đồng Hỷ - Thái Nguyên`,'Thôn 6 - Xã Trại Cau - Tỉnh Thái Nguyên');
 
 /* Journey progress */
 const jp=document.getElementById('journeyProgress');
@@ -2058,7 +2129,7 @@ async function saveWishToGoogleSheet({name,wish,att='',type='wish'}){
     attendance:att,
     type,
     createdAt:vietnamTimeISO(),
-    page:location.pathname,
+    page:location.pathname+'?event='+eventKey,
     guestParam:guestParam
   };
   try{
